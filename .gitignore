@@ -1,0 +1,62 @@
+# -----------------
+# OS / System files
+# -----------------
+.DS_Store
+**/.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# -----------------
+# Node / Next.js (frontend)
+# -----------------
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+
+# Logs
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+
+# Env files
+frontend/.env*
+!frontend/.env.example
+
+# -----------------
+# Elixir / Phoenix (backend)
+# -----------------
+backend/_build/
+backend/deps/
+backend/cover/
+backend/doc/
+backend/.elixir_ls/
+
+# Logs
+backend/*.log
+
+# Phoenix uploads (if you use them)
+backend/priv/static/uploads/
+
+# Env files
+backend/.env*
+!backend/.env.example
+
+# -----------------
+# General
+# -----------------
+*.swp
+*.swo
+*~
+
+# IDEs
+.vscode/
+.idea/
