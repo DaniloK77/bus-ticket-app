@@ -2,18 +2,14 @@ defmodule BusTicket.Repo.Migrations.CreateCountries do
   use Ecto.Migration
 
   def change do
-    
-    create table(:countries) do 
+    create table(:countries) do
       add :name, :string, null: false
       add :code, :string, null: false
-      
-      
-      create
-      
-      timestamps();
-      
-      
+
+      timestamps()
     end
 
+    create unique_index(:countries, [:code])
+    create unique_index(:countries, [:name])
   end
 end
