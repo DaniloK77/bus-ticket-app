@@ -4,12 +4,10 @@ defmodule BusTicket.Repo.Migrations.CreateCities do
   def change do
     create table(:cities) do
       add :name, :string, null: false
-      add :adress, :string, null: false
       add :postal_code, :string, null: false
-      add :phone, :string, null: false
-      add :image, :string, null: false
+      add :image, :string
 
-    
+
 
       add :country_id,
           references(:countries, on_delete: :delete_all),
@@ -18,7 +16,7 @@ defmodule BusTicket.Repo.Migrations.CreateCities do
       timestamps()
     end
 
-    create unique_index(:cities, [:name])
+    create unique_index(:cities, [:name, :country_id])
 
     create index(:cities, [:country_id])
     create index(:cities, [:postal_code])
