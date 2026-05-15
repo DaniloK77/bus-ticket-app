@@ -17,7 +17,7 @@ defmodule BusTicket.Country do
   
   
   
-  defchangeset(country, attrs) do 
+  def changeset(country, attrs) do 
     country
     |> cast(attrs, [:name, :code])
     |> validate_required([:name, :code])
